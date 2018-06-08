@@ -1,29 +1,33 @@
 # Data Dashboard
 
-## Preámbulo
+## Cómo nació la idea
 
-El data dashboard es un trabajao colaborativo donde aprenderemos una nueva funcionalidad en el Git. 
-Para este trabajo nos uniremos en parejas y realizaremos el trabajo en base a remotos, ramas y masters.
+En Laboratoria tienen la necesidad
 
 La pareja que conforma este trabajo:
 + Kalu Guzmán
 + Karina Niebles 
 
 
-## Problema
+## ¿Cuál fue el proceso?
 
 Las Training Manager de Laboratoria necesitan **ordenar, filtrar y agrupar** a las alumnas de acuerdo al cohort al que pertenecen, turno y squad, tambien hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
 
-## Apuntes
+## Detalles del proceso
 
-### Leccciones a leer en el LMS
+### Quiénes son los principales usuarios de producto.
 
-+ Mis cursos > Browser Java Script > Unidad 4 > XHR
-+ Mis cursos > Java Script > Unidades de la 1 - 7
+### Cuáles son los objetivos de estos usuarios en relación con el producto.
 
-### Otras fuentes
-+ Curso de [Platzi](www.platzi.com)
-+ Aprender a usar servidores para jalar la data.
+### Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué
+
+### Cómo los descubriste.
+
+### Cuándo revisan normalmente estos datos los usuarios.
+
+### Cómo crees que el producto les está resolviendo sus problemas.
+
+### Cómo fue tu proceso de diseño.
 
 ==============
 
