@@ -2,7 +2,7 @@
 
 ## Preámbulo
 
-El data dashborad es un trabajao colaborativo donde aprenderemos una nueva funcionalidad en el Git. 
+El data dashboard es un trabajao colaborativo donde aprenderemos una nueva funcionalidad en el Git. 
 Para este trabajo nos uniremos en parejas y realizaremos el trabajo en base a remotos, ramas y masters.
 
 La pareja que conforma este trabajo:
@@ -12,7 +12,7 @@ La pareja que conforma este trabajo:
 
 ## Problema
 
-Las Training Manager de Laboratoria necesitan hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
+Las Training Manager de Laboratoria necesitan ordenar,filtrar y agrupar a las alumnas deacuerdo a su cohort al que pertenecen,turno y squat tambien hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
 
 ## Apuntes
 
