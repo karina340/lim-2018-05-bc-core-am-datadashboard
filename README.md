@@ -12,7 +12,7 @@ La pareja que conforma este trabajo:
 
 ## Problema
 
-Las Training Manager de Laboratoria necesitan ordenar,filtrar y agrupar a las alumnas deacuerdo a su cohort al que pertenecen,turno y squat tambien hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
+Las Training Manager de Laboratoria necesitan **ordenar, filtrar y agrupar** a las alumnas de acuerdo al cohort al que pertenecen, turno y squad, tambien hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
 
 ## Apuntes
 
