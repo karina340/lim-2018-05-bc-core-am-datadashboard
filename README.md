@@ -2,6 +2,32 @@
 
 ## Preámbulo
 
+El data dashborad es un trabajao colaborativo donde aprenderemos una nueva funcionalidad en el Git. 
+Para este trabajo nos uniremos en parejas y realizaremos el trabajo en base a remotos, ramas y masters.
+
+La pareja que conforma este trabajo:
++ Kalu Guzmán
++ Karina Niebles 
+
+
+## Problema
+
+Las Training Manager de Laboratoria necesitan hacer un mejor control sobre nuestro avance en las lecturas no obligatorias, para ello es necesario implementar una plataforma donde ellas reciban la data ya procesada.
+
+## Apuntes
+
+### Leccciones a leer en el LMS
+
++ Mis cursos > Browser Java Script > Unidad 4 > XHR
++ Mis cursos > Java Script > Unidades de la 1 - 7
+
+### Otras fuentes
++ Curso de [Platzi](www.platzi.com)
++ Aprender a usar servidores para jalar la data.
+
+==============
+
+
 En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
 mayor cantidad de datos posibles respecto al progreso de las estudiantes para
 apoyarlas en su aprendizaje.
