@@ -31,6 +31,12 @@ Las Training Manager de Laboratoria necesitan **ordenar, filtrar y agrupar** a l
 
 ==============
 
+## Que necesitamos para este proyecto 
+
++ Uso de API DE LABORATORIA
++ Implementacion de graficos en la aplicacion web 
++ Desarrollo de prototipos en SIGMA
+
 
 En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
 mayor cantidad de datos posibles respecto al progreso de las estudiantes para
