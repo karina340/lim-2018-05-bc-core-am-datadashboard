@@ -9,8 +9,8 @@ b.addEventListener('click',evt => {
   l.style.display = 'block'
 
   //Debeos de jalar la data desde acá? src/data.js o de un archivo .json
-  const xhr = new XMLHttpRequest()
-  xhr.open('GET','/json',true)
+  /*const xhr = new XMLHttpRequest()
+  xhr.open('GET','/json',true)*/
 
   //Qué hacemos con la data?
   xhr.addEventListener('load', e => {
@@ -40,3 +40,13 @@ const draw = data => {
     container.appendChild(datenew)
   });
 }
+
+var xhttp = newXMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
