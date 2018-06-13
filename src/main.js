@@ -1,14 +1,4 @@
-/*var xhttp = new XMLHttpRequest();
-xhttp.open("GET", "../data/cohorts/lim-2018-03-pre-core-pw/users.json", true);
-xhttp.send();
-xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("botonJSON").addEventListener('click', function () {
-  console.log(JSON.parse(xhttp.responseText))
-});
-    }
-}*/
- function getCohort() {
+function getCohort() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState === 4 && xhttp.status === 200) {
