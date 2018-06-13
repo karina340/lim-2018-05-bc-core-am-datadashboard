@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="LogoLAB">
-      <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" alt="20"><br>
-      Talento que transforma
-    </header>
-    <h1>hola, somos la doble K</h1>
-    <div id="myContent">
-      <div>
-      <h2>base de datos</h2>
-      <p>Tenemos contenido</p>
-      <span>¿por qué aquí va la fecha?</span>
-      </div>
-    </div>
-  <!--div id="carga">Cargando...</div-->  
 
-  <button id="botonJSON">Cargar JSON</button>
-    
-  </body>
-  <script src="main.js"></script>
-  <script src="data.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="LogoLAB">
+    <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" alt="20">
+    <br> Talento que transforma
+  </header>
+  <main>
+    <select id="cboCohorts"> </select>
+    <select id="cboUsers"> </select>
+  </main>
+</body>
+<script src="main.js"></script>
+<script src="data.js"></script>
+
+<script>
+  getCohort();
+  computeUsersStats();
+</script>
+
 </html>
