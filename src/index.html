@@ -1,28 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="LogoLAB">
-      <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" alt="20"><br>
-      Talento que transforma
-    </header>
-    <h1>Datos laboratoria</h1>
-    <div id="myContent">
-      <div>
-      <h2>base de datos</h2>
-      <p>Tenemos contenido</p>
-      <span>¿por qué aquí va la fecha?</span>
-      </div>
-    </div>
-  <!--div id="carga">Cargando...</div-->  
 
-  <button id="botonJSON">Cargar JSON</button>
-    
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Data Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="LogoLAB">
+    <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" alt="20">
+    <br> Talento que transforma
+  </header>
+  <main>
+    <select id="cboCohorts"> </select>
+    <select id="cboUsers"> </select>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Unidad</th>
+          <th scope="col">Progreso</th>
+        </tr>
+      </thead>
+      <tbody id="progressTable">
+
+      </tbody>
+    </table>
+  </main>
   <script src="main.js"></script>
   <script src="data.js"></script>
+
+
+
+  <script>
+    let cboUsers = document.getElementById('cboUsers');
+    cboUsers.addEventListener("change", function () {
+      getProgress();
+    });
+
+    getCohort();
+    computeUsersStats();
+
+    function getCohort() {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+
+          let arrayCohorts = JSON.parse(xhttp.responseText);
+          // console.log(arrayCohorts);
+          let select = document.getElementById("cboCohorts");
+
+          for (let i in arrayCohorts) {
+            let option = document.createElement("option");
+            select.options.add(option, 0);
+            select.options[0].value = arrayCohorts[i].id;
+            select.options[0].innerText = arrayCohorts[i].id;
+          }
+        }
+      };
+      xhttp.open("GET", "../data/cohorts.json", true);
+      xhttp.send();
+    };
+    function computeUsersStats() {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+
+          let arrayUsers = JSON.parse(xhttp.responseText);
+
+          let select = document.getElementById("cboUsers");
+
+          for (let i in arrayUsers) {
+            let option = document.createElement("option");
+            select.options.add(option, 0);
+            select.options[0].value = arrayUsers[i].id;
+            select.options[0].innerText = arrayUsers[i].name;
+          }
+        }
+      };
+      xhttp.open("GET", "../data/cohorts/lim-2018-03-pre-core-pw/users.json", true);
+      xhttp.send();
+    };
+
+    function getProgress() {
+
+      let select = document.getElementById("cboUsers");
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+
+          let arrayProgress = JSON.parse(xhttp.responseText);
+          // console.log(arrayCohorts);
+          //let select = document.getElementById("cboCohorts");
+          //console.log(arrayProgress[select.value]);
+          let arrayUnits = arrayProgress[select.value]['intro']['units'];
+          document.getElementById("progressTable").innerText = null;
+
+          for (let i in arrayUnits) {
+            console.log(i);
+            let fila = "<tr><td>" + i + "</td><td>" + arrayUnits[i].totalParts + "</td></tr>";
+            let btn = document.createElement("TR");
+            btn.innerHTML = fila;
+            document.getElementById("progressTable").appendChild(btn);
+
+          }
+        }
+      };
+      xhttp.open("GET", "../data/cohorts/lim-2018-03-pre-core-pw/progress.json", true);
+      xhttp.send();
+    };
+
+
+
+  </script>
+</body>
+
 </html>
