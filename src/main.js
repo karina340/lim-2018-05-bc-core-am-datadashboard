@@ -19,7 +19,7 @@ computeUsersStats(); function getCohort() {
             }
    }
     };
-    
+
     xhttp.open("GET", "../data/cohorts.json", true);
     xhttp.send();
 };
@@ -29,7 +29,8 @@ function computeUsersStats() {
         if (xhttp.readyState === 4 && xhttp.status === 200) {
 
             let arrayUsers = JSON.parse(xhttp.responseText);
-            let select = document.getElementById("cboUsers"); for (let i in arrayUsers) {
+            let select = document.getElementById("cboUsers"); 
+            for (let i in arrayUsers) {
                 let option = document.createElement("option");
                 select.options.add(option, 0);
                 select.options[0].value = arrayUsers[i].id;
