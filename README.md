@@ -15,58 +15,50 @@ Las Training Manager de Laboratoria necesitan **ordenar, filtrar y agrupar** a l
 
 ## Detalles del proceso
 
-  ### Procedimiento
+**a. Recepción del pedido:**
+Al analizar el contenido del pedido, rescatamos que debemos realizar lo siguiente:
 
-  **a. Recepción del pedido:**
+- Extracción de la data json.
+- Crear funciones para mostrar la data json de manera ordenada según el avance individual de cada alumna.
 
-  Al analizar el contenido del pedido, rescatamos que debemos realizar lo siguiente:
+**b. Primeros pasos con el JavaScript:**
+- Desarrollo del primer boceto de baja resolución.
+- Nuestra primera fue tener tres páginas
 
-  - Extracción de la data json.
-  - Crear funciones para mostrar la data json de manera ordenada según el avance individual de cada alumna.
+1. Login
+![login](https://www.dropbox.com/s/ilcltwwo0qkszio/IMG-20180615-WA0004.jpg?dl=0)
 
-  **b. Primeros pasos con el JavaScript:**
+2. Resultados generales
+![general](https://www.dropbox.com/s/r5o9f924f4pqstj/IMG-20180615-WA0003.jpg?dl=0)
 
-    - Desarrollo del primer boceto de baja resolución.
-    - Nuestra primera fue tener tres páginas.
+3. Detalle alumnas
+![alumnas](https://www.dropbox.com/s/av4n2sei3wng04q/IMG-20180615-WA0006.jpg?dl=0)
 
-      1. Login
-      ![login](https://www.dropbox.com/s/ilcltwwo0qkszio/IMG-20180615-WA0004.jpg?dl=0)
+Llevamos lo del papel a la computadora a través de [Invision](https://projects.invisionapp.com/freehand/document/nAiap4sh7) y nos enfocamos en el sector de alumnas.
 
-      2. Resultados generales
-      ![general](https://www.dropbox.com/s/r5o9f924f4pqstj/IMG-20180615-WA0003.jpg?dl=0)
+![invision](http://prntscr.com/jvcrul)
 
-      3. Detalle alumnas
-      ![alumnas](https://www.dropbox.com/s/av4n2sei3wng04q/IMG-20180615-WA0006.jpg?dl=0)
+Comenzamos a desarrollar el prototipo de alta calidad en [Figma](https://www.figma.com/file/YXvYSU7p3MNVIvjC3bMxIFPa/Dashboard-Lab-2K).
 
+![figma](http://prntscr.com/jvcsv0)
 
-    Llevamos lo del papel a la computadora a través de [Invision](https://projects.invisionapp.com/freehand/document/nAiap4sh7) y nos enfocamos en el sector de alumnas.
+A pesar de tener tres páginas hemos decidido enfocarnos en desarrollar, en primer lugar, la página "Detalle alumnas" porque ese es el principal requemiento.
 
-  ![invision](http://prntscr.com/jvcrul)
+- Extracción de la data.
+Al tener la data, debíamos investigar sobre cómo llamar la data y mostrarla. Para ello recurrimos a la información del LMS y de W3Schools sobre el [XML HttpRequest](https://www.w3schools.com/xml/xml_http.asp).
 
-    Comenzamos a desarrollar el prototipo de alta calidad en [Figma](https://www.figma.com/file/YXvYSU7p3MNVIvjC3bMxIFPa/Dashboard-Lab-2K).
+Usamos la fórmula:
 
-  ![figma](http://prntscr.com/jvcsv0)
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200)
+}
 
-    A pesar de tener tres páginas hemos decidido enfocarnos en desarrollar, en primer lugar, la página "Detalle alumnas" porque ese es el principal requemiento.
+Al reemplazar los valores, realizamos pruebas para poder llamar la data a la consola. Lo siguiente es presentar la data en el HTML.
 
-    - Extracción de la data.
-    Al tener la data, debíamos investigar sobre cómo llamar la data y mostrarla. Para ello recurrimos a la información del LMS y de W3Schools sobre el [XML HttpRequest](https://www.w3schools.com/xml/xml_http.asp).
+**c.Primeros pasos con el HTML:**
 
-  Usamos la fórmula:
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-
-  Al reemplazar los valores, realizamos pruebas para poder llamar la data a la consola. Lo siguiente es presentar la data en el HTML.
-
-  **c. Primeros pasos con el HTML:**
-  Al tener la estructura definida pasamos a realizar un primer bosquejo del HTML que contiene las partes principales del producto.
-
-  {captura de pantalla de lo primero}
-
-  **d. Primeros pasos con el CSS:**
-  Al usar el CSS se tuvo que modificar el HTML.
+Al tener la estructura definida pasamos a realizar un primer bosquejo del HTML que contiene las partes principales del producto.
 
 
 
