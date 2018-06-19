@@ -19,6 +19,7 @@ const getCohort = () => {
 		select.options[0].innerText = arrayCohorts[i].id;
 	}
 };
+
 const getUsers = () => {
 
 	let arrayUsers = JSON.parse(event.target.responseText);
