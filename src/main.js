@@ -9,10 +9,11 @@ const dataRequest = (url, callback) => {
 	xhr.send();
 }
 
+
 const getCohort = () => {
 	let arrayCohorts = JSON.parse(event.target.responseText);
 	let select = document.getElementById("cboCohorts");
-	for (let i in arrayCohorts) {
+	for (let i of arrayCohorts) {
 		let option = document.createElement("option");
 		select.options.add(option, 0);
 		select.options[0].value = arrayCohorts[i].id;
