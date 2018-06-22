@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" class=h eader-image
+      alt="logo">
+  </header>
+  <!--<hr>-->
+  <main>
+    <aside class=menu-lateral>
+      <div id=name-user>
+        <img id=avatar src="https://image.ibb.co/htQKLT/ale.png" alt="avatar" /> Alejandra Ramirez
+      </div>
+      <div class="vertical-menu">
+        <a href="#">Resumen general</a>
+        <a href="#">Detalle alumnas</a>
+      </div>
+      <button>Salir</button>
+    </aside>
+    <section>
+      <div class=elegir-data>
+        <p>Sede:</p>
+        <select></select>
+        <p>Cohort:</p>
+        <select id="cboCohorts"></select>
+      </div>
+      <div class=output>aquí va la info general</div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+  <script src="data.js"></script> 
+  <footer>Realizado por el equipo doble K</footer>
+</body>
+</html>
+
+<!--codigo de Karina
+<html>
 
 <head>
   <meta charset="utf-8">
   <title>Laboratoria Dashboard</title>
-  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -15,32 +59,33 @@
   <br>
   <br>
   <main>
-      <center>
-    <div id="cohort">Selecciona cohort</div>
-    <br>
-    <select id="cboCohorts"> </select>
-    <br>
-    <br>
-    <div id="cohort">Selecciona Alumna</div>
-    <br>
-    <select id="cboUsers"> </select>
-    <br>
-    <br>
-    <table class="table table-bordered">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">Unidad</th>
-          <br>
-          <br>
-          <th scope="col">Progreso</th>
-        </tr>
-      </thead>
-      <tbody id="progressTable">
+    <center>
+      <div id="cohort">Selecciona cohort</div>
+      <br>
+      <select id="cboCohorts"> </select>
+      <br>
+      <br>
+      <div id="cohort">Selecciona Alumna</div>
+      <br>
+      <select id="cboUsers"> </select>
+      <br>
+      <br>
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Unidad</th>
+            <br>
+            <br>
+            <th scope="col">Progreso</th>
+          </tr>
+        </thead>
+        <tbody id="progressTable">
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
   </main>
   <script src="main.js"></script>
   <script src="data.js"></script>
 </body>
-</html>
+
+</html> -->
