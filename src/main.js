@@ -8,7 +8,6 @@ const dataRequest = (url, callback) => {
 	xhr.onload = callback;
 	xhr.send();
 }
-
 const getCohort = () => {
 	let arrayCohorts = JSON.parse(event.target.responseText);
 	let select = document.getElementById("cboCohorts");
@@ -19,11 +18,11 @@ const getCohort = () => {
 		select.options[0].innerText = arrayCohorts[i].id;
 	}
 };
-const getUsers = () => {
 
+const getUsers = () => {
 	let arrayUsers = JSON.parse(event.target.responseText);
 	let select = document.getElementById("cboUsers");
-	for (let i in arrayUsers) {
+	for (let i of arrayUsers) {
 		let option = document.createElement("option");
 		select.options.add(option, 0);
 		select.options[0].value = arrayUsers[i].id;
@@ -48,8 +47,6 @@ const getProgress = () => {
 		document.getElementById("progressTable").appendChild(btn);
 	}
 };
-
-
 dataRequest(cohortUrl, getCohort);
 dataRequest(userUrl, getUsers);
 dataRequest(progress, getProgress)
