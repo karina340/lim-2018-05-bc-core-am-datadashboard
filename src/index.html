@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
 </head>
-<body onload="myOnLoad()">
+<body>
   <header>
     <img src="http://v.fastcdn.co/t/cf943cfe/5519e61e/1527645394-27418802-257x33-Laboratoria-Logo-RGB.png" class=h eader-image
       alt="logo">
@@ -27,7 +27,7 @@
       <div class=elegir-data>
         <select name="cboSede"><option>selecciona sede </option></select>
         <p>Cohort:</p>
-        <select id="cboCohorts" onchange="cursos()"></select>
+        <select id="cboCohorts" onchange="loadUsers();"></select>
         <p>Alumnas:</p>
         <select id="cboUsers"></select>
       </div>
@@ -37,6 +37,7 @@
           <tr>
             <th scope="col"> Unidad</th>
             <th scope="col">Partes Completadas</th>
+            </tr>
         </thead>
         <tbody id="progressTable">
         </tbody>
@@ -45,8 +46,14 @@
     </section>
     
   </main>
-  <script src="main.js"></script>
-  <script src="data.js"></script> 
+
+  <script src="new.js"></script>
+  <script> 
+  loadCohorts();
+  //loadUsers();
+  getUsersData()
+  </script>
+  <!--<script src="data.js"></script> -->
   <footer>Trabaja con nosotros ...Trabajamos para ser la principal fuente de talento tech femenino de América Latina para el mundo.</footer>
 </body>
 </html>
