@@ -25,35 +25,32 @@
     </aside>
     <section>
       <div class=elegir-data>
-        <select name="cboSede"><option>selecciona sede </option></select>
+        <select name="cboSede"><option>selecciona Sede </option></select>
         <p>Cohort:</p>
         <select id="cboCohorts" onchange="loadUsers();"></select>
-        <p>Alumnas:</p>
-        <select id="cboUsers"></select>
       </div>
       <div class=output>
       <table class="table table-bordered">
         <thead class="thead-dark">
           <tr>
-            <th scope="col"> Unidad</th>
-            <th scope="col">Partes Completadas</th>
+            <th scope="col"> NRO</th>
+            <th scope="col">Nombre Alumna</th>
             </tr>
         </thead>
-        <tbody id="progressTable">
+        <tbody id="usersTable">
         </tbody>
       </table>
     </div>
     </section>
     
   </main>
-
-  <script src="new.js"></script>
+  <script src="main.js"></script>
   <script> 
   loadCohorts();
   //loadUsers();
   getUsersData()
   </script>
-  <!--<script src="data.js"></script> -->
+  
   <footer>Trabaja con nosotros ...Trabajamos para ser la principal fuente de talento tech femenino de América Latina para el mundo.</footer>
 </body>
 </html>

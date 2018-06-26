@@ -19,10 +19,14 @@ function loadUsers(){
     .then( res => res.json() )
     .then ( arrayUsers => {
         for (let i in arrayUsers) {
-            let option = document.createElement("option");
-            select.options.add(option, 0);
-            select.options[0].value = arrayUsers[i].id;
-            select.options[0].innerText = arrayUsers[i].name;
+           // let option = document.createElement("TR");
+            //select.options.add(option, 0);
+            //select.options[0].value = arrayUsers[i].id;
+            //select.options[0].innerText = arrayUsers[i].name;
+            let fila = "<tr><td>" + i + "</td><td>" + arrayUsers[i].name + "</td></tr>";
+                   let btn = document.createElement("TR");
+                   btn.innerHTML = fila;
+                   document.getElementById("usersTable").appendChild(btn);
         }
 		})
 		.catch(ex=>{})
@@ -49,7 +53,7 @@ function computeUsersStats(users, progress, courses){
     let lista = users.map( function (userWhitStats) {
         try {
           userWhitStats.stats = {
-            percent: null,
+            percent:null,
             exercises: {
               total: null,
               completed: null,
